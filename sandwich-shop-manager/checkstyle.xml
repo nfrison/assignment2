@@ -40,5 +40,9 @@
 			<property name="excludes" value="java.io,java.net,java.lang.Math"/>
 		</module>
 		
+		<module name="IllegalImport">
+			<property name="illegalPkgs" value="java.io, java.sql"/>
+		</module>
+		
 	</module>
 </module>
