@@ -5,8 +5,14 @@
 	<property name="fileExtensions" value="java" />
 	
 	<module name="TreeWalker">
+		
 		<module name="BooleanExpressionComplexity">
 			<property name="max" value="7"/>
 		</module>
+		
+		<module name="CyclomaticComplexity">
+			<property name="max" value="15"/>
+		</module>
+		
 	</module>
 </module>
