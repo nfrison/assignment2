@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+"http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+	<property name="fileExtensions" value="java" />
+	
+	<module name="TreeWalker">
+		<module name="BooleanExpressionComplexity">
+			<property name="max" value="7"/>
+		</module>
+	</module>
+</module>
