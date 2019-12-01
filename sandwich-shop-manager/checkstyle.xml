@@ -28,5 +28,9 @@
 			<property name="countEmpty" value="false"/>
 		</module>
 		
+		<module name="EmptyCatchBlock">
+			<property name="exceptionVariableName" value="expected|ignore"/>
+		</module>
+		
 	</module>
 </module>
