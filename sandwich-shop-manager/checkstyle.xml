@@ -12,6 +12,10 @@
 		<property name="eachLine" value="true"/>
 	</module>
 	
+	<module name="Header">
+		<property name="headerFile" value="config/header.txt"/>
+	</module>
+	
 	<module name="TreeWalker">
 		
 		<module name="BooleanExpressionComplexity">
