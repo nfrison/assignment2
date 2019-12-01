@@ -36,5 +36,9 @@
 			<property name="exceptionVariableName" value="expected|ignore"/>
 		</module>
 		
+		<module name="AvoidStarImport">
+			<property name="excludes" value="java.io,java.net,java.lang.Math"/>
+		</module>
+		
 	</module>
 </module>
