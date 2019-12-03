@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="it.unipd.tos.AppTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="it.unipd.tos.AppTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\ProgramFiles\Java\jdk1.8.0_171\jre\bin"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Fritz\Documents\UNI\TOS\assignment2\sandwich-shop-manager"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:/Fritz/Documents/UNI/TOS/assignment2/sandwich-shop-manager"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -27,24 +27,26 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\Fritz\Develop\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8724565364113884750.tmp"/>
+    <property name="classworlds.conf" value="D:/ProgramFiles/apache-maven-3.6.2/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\ProgramFiles\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/ProgramFiles/Java/jdk1.8.0_171/bin/../jre/bin/server;D:/ProgramFiles/Java/jdk1.8.0_171/bin/../jre/bin;D:/ProgramFiles/Java/jdk1.8.0_171/bin/../jre/lib/amd64;D:\ProgramFiles\Python37\Scripts\;D:\ProgramFiles\Python37\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\xampp\php;C:\ProgramData\ComposerSetup\bin;D:\ProgramFiles\heroku\bin;D:\ProgramFiles\Git\cmd;D:\ProgramFiles(x86)\Qt\Tools\mingw530_32\bin;C:\Program Files\NVIDIA Corporation\NVIDIA;C:\adb;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\ProgramFiles\Java\jdk1.8.0_171;D:\ProgramFiles\apache-maven-3.6.2\bin;;D:\ProgramFiles(x86)\Gpg4win\..\GnuPG\bin;C:\Users\Fritz\AppData\Local\Microsoft\WindowsApps;C:\Users\Fritz\AppData\Roaming\Composer\vendor\bin;D:\ProgramFiles\heroku\bin;D:\ProgramFiles\MiKTeX 2.9\miktex\bin\x64\;C:\WINDOWS\system32;;."/>
+    <property name="java.library.path" value="D:\ProgramFiles\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Fritz\bin;D:\ProgramFiles\Git\mingw64\bin;D:\ProgramFiles\Git\usr\local\bin;D:\ProgramFiles\Git\usr\bin;D:\ProgramFiles\Git\usr\bin;D:\ProgramFiles\Git\mingw64\bin;D:\ProgramFiles\Git\usr\bin;C:\Users\Fritz\bin;D:\ProgramFiles\Python37\Scripts;D:\ProgramFiles\Python37;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;D:\xampp\php;C:\ProgramData\ComposerSetup\bin;D:\ProgramFiles\heroku\bin;D:\ProgramFiles\Git\cmd;D:\ProgramFiles(x86)\Qt\Tools\mingw530_32\bin;C:\Program Files\NVIDIA Corporation\NVIDIA;C:\adb;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;D:\ProgramFiles\Java\jdk1.8.0_171;D:\ProgramFiles\apache-maven-3.6.2\bin;D:\ProgramFiles(x86)\GnuPG\bin;C:\Users\Fritz\AppData\Local\Microsoft\WindowsApps;C:\Users\Fritz\AppData\Roaming\Composer\vendor\bin;D:\ProgramFiles\heroku\bin;D:\ProgramFiles\MiKTeX 2.9\miktex\bin\x64;D:\ProgramFiles\Git\usr\bin\vendor_perl;D:\ProgramFiles\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="D:/ProgramFiles/apache-maven-3.6.2/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="D:/ProgramFiles/apache-maven-3.6.2/lib/jansi-native"/>
     <property name="user.home" value="C:\Users\Fritz"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="user.name" value="Fritz"/>
-    <property name="java.class.path" value="C:\Users\Fritz\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.9.0.20180606-2035\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="D:/ProgramFiles/apache-maven-3.6.2/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="D:\ProgramFiles\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="it"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -53,7 +55,7 @@
     <property name="java.ext.dirs" value="D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\resources.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\rt.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\jsse.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\jce.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\charsets.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\lib\jfr.jar;D:\ProgramFiles\Java\jdk1.8.0_171\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="D:\Fritz\Documents\UNI\TOS\assignment2\sandwich-shop-manager\EMBEDDED"/>
+    <property name="maven.home" value="D:\ProgramFiles\apache-maven-3.6.2"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,5 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="it.unipd.tos.AppTest" name="testApp" time="0.002"/>
+  <testcase classname="it.unipd.tos.AppTest" name="testApp" time="0.003"/>
 </testsuite>
