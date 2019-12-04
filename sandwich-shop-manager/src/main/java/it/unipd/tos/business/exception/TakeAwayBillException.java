@@ -1,0 +1,10 @@
+////////////////////////////////////////////////////////////////////
+// [Nicolo] [Frison] [1147682]
+////////////////////////////////////////////////////////////////////
+package it.unipd.tos.business.exception;
+
+public class TakeAwayBillException extends Exception{
+    public TakeAwayBillException(String s) {
+        super(s);
+    }
+}
