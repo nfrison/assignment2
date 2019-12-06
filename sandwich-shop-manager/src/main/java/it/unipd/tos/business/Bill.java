@@ -9,6 +9,8 @@ import it.unipd.tos.business.exception.TakeAwayBillException;
 import it.unipd.tos.model.MenuItem;
 
 public class Bill implements TakeAwayBill {
+    private final double commission = 0.5;
+    
     public double getOrderPrice(List<MenuItem> itemsOrdered) throws TakeAwayBillException {
         double total = 0;
         int itemsN = 0;
@@ -23,6 +25,10 @@ public class Bill implements TakeAwayBill {
         
         if( itemsN > 30 ) {
             throw new TakeAwayBillException("Gli elementi dell'ordine possono essere al massimo 30");
+        }
+        
+        if( total <= 10 ) {
+            total += this.commission;
         }
         
         return total;
