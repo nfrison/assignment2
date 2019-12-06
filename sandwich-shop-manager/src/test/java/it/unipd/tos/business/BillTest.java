@@ -6,6 +6,7 @@ package it.unipd.tos.business;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.util.List;
 
@@ -139,7 +140,7 @@ public class BillTest {
     }
     
     /*  
-     * Calcolo totale sconto 50 issue #2
+     * Calcolo totale sconto 50 issue #3
      */
     
     // Aggiunta  di 8 panini base e 3 fritti base
@@ -183,5 +184,67 @@ public class BillTest {
                 (-(5.35*5+3.5*7) * 10 / 100) +
                 2.4;
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    /*  
+     * Calcolo totale sconto 50 issue #4
+     */
+    private ExpectedException error= ExpectedException.none();
+    
+    // Aggiunta  di 30 panini base
+    @Test
+    public void testLimit30Items() throws TakeAwayBillException {
+        for( int i = 0 ; i < 30 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
+        
+        double sum = 
+                5.35*30 - 
+                5.35/2 -
+                (5.35*30 * 10 / 100);
+        assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    // Aggiunta  di 30 fritti base
+    @Test
+    public void testLimit30Items1() throws TakeAwayBillException {
+        for( int i = 0 ; i < 30 ; i++ ) {
+            this.itemsOrdered.add(this.frittoBase);
+        }
+        
+        double sum = 
+                3.5*30 -
+                (3.5*30 * 10 / 100);
+        assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    // Aggiunta  di 15 panini base e 15 fritti base
+    @Test
+    public void testLimit30Items2() throws TakeAwayBillException {
+        for( int i = 0 ; i < 15 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+            this.itemsOrdered.add(this.frittoBase);
+        }
+        
+        double sum = 
+                5.35 * 15 +
+                3.5 * 15 -
+                5.35/2 -
+                ((5.35*15 + 3.5*15) * 10 / 100);
+        assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    // Aggiunta  di 16 panini base e 16 fritti base
+    @Test
+    public void testLimit30Items3() throws TakeAwayBillException {
+        this.error.expect(TakeAwayBillException.class);
+        this.error.expectMessage("Gli elementi dell'ordine possono essere al massimo 30");
+        
+        for( int i = 0 ; i < 16 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+            this.itemsOrdered.add(this.frittoBase);
+        }
+        
+        this.bill.getOrderPrice(itemsOrdered);
     }
 }
