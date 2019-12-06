@@ -17,6 +17,11 @@ public class Bill implements TakeAwayBill {
         
         for( MenuItem i : itemsOrdered ) {
             total += i.getPrice();
+            itemsN++;
+        }
+        
+        if( itemsN == 0 ) {
+            throw new TakeAwayBillException("Ordine vuoto");
         }
         
         total -= this.getLowestPricePaninoDiscount(itemsOrdered);
