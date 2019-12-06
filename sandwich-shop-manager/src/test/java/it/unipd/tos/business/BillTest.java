@@ -34,7 +34,9 @@ public class BillTest {
         frittoBase = new MenuItem(MenuItem.products.Fritti,"fritto1",3.5);
     }
     
-    //  Calcolo totale base issue #1
+    /*
+     *   Calcolo totale base issue #1
+     */
     @Test
     public void testEmptyList() throws TakeAwayBillException {
         assertEquals(0,bill.getOrderPrice(this.itemsOrdered),0.0);
@@ -74,16 +76,16 @@ public class BillTest {
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0);
     }
     
-    //  Calcolo totale sconto 50 issue #2
+    /*  
+     * Calcolo totale sconto 50 issue #2
+     */
 
     // Aggiunta di 5 panini base
     @Test
     public void testDiscount50TotalSum() throws TakeAwayBillException {
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
+        for( int i = 0 ; i < 5 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
         
         this.itemsOrdered.add(this.bevandaBase);
         this.itemsOrdered.add(this.frittoBase);
@@ -96,11 +98,9 @@ public class BillTest {
     @Test
     public void testDiscount50TotalSum1() throws TakeAwayBillException {
         this.itemsOrdered.add(new MenuItem(MenuItem.products.Panini,"paninoDiscount",3.6));
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
+        for( int i = 0 ; i < 5 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
         
         this.itemsOrdered.add(this.bevandaBase);
         this.itemsOrdered.add(this.frittoBase);
@@ -113,11 +113,9 @@ public class BillTest {
     @Test
     public void testDiscount50TotalSum2() throws TakeAwayBillException {
         this.itemsOrdered.add(new MenuItem(MenuItem.products.Panini,"paninoDiscount",8));
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
+        for( int i = 0 ; i < 5 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
         
         this.itemsOrdered.add(this.bevandaBase);
         this.itemsOrdered.add(this.frittoBase);
@@ -129,20 +127,61 @@ public class BillTest {
     // Aggiunta di 7 panini base
     @Test
     public void testDiscount50TotalSum3() throws TakeAwayBillException {
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
-        this.itemsOrdered.add(this.paninoBase);
+        for( int i = 0 ; i < 7 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
         
         this.itemsOrdered.add(this.bevandaBase);
         this.itemsOrdered.add(this.frittoBase);
         
         double sum = 5.35*6 + 5.35/2 + 2.4 + 3.5;
-        System.out.println(sum);
-        System.out.println(bill.getOrderPrice(this.itemsOrdered));
+        assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    /*  
+     * Calcolo totale sconto 50 issue #2
+     */
+    
+    // Aggiunta  di 8 panini base e 3 fritti base
+    @Test
+    public void testDiscount10TotalSum() throws TakeAwayBillException {
+        for( int i = 0 ; i < 8 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
+        
+        for( int i = 0 ; i < 3 ; i++ ) {
+            this.itemsOrdered.add(this.frittoBase);
+        }
+        
+        this.itemsOrdered.add(this.bevandaBase);
+        
+        double sum = 
+                5.35*8 + 
+                3.5*3 +
+                (-5.35/2) +
+                (-(5.35*8+3.5*3) * 10 / 100) +
+                2.4;
+        assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
+    }
+    
+    // Aggiunta  di 5 panini base e 7 fritti base
+    @Test
+    public void testDiscount10TotalSum1() throws TakeAwayBillException {
+        for( int i = 0 ; i < 5 ; i++ ) {
+            this.itemsOrdered.add(this.paninoBase);
+        }
+        
+        for( int i = 0 ; i < 7 ; i++ ) {
+            this.itemsOrdered.add(this.frittoBase);
+        }
+        
+        this.itemsOrdered.add(this.bevandaBase);
+        
+        double sum = 
+                5.35*5 + 
+                3.5*7 +
+                (-(5.35*5+3.5*7) * 10 / 100) +
+                2.4;
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0001);
     }
 }

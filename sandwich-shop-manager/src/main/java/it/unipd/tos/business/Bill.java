@@ -19,6 +19,8 @@ public class Bill implements TakeAwayBill {
         
         total -= this.getLowestPricePaninoDiscount(itemsOrdered);
         
+        total -= this.getPriceOver50Discount(itemsOrdered);
+        
         return total;
     }
     
@@ -35,6 +37,24 @@ public class Bill implements TakeAwayBill {
         
         if( nPanini > 5 ) {
             discount /= 2;
+        } else {
+            discount = 0;
+        }
+        
+        return discount;
+    }
+    
+    private double getPriceOver50Discount(List<MenuItem> itemsOrdered) {
+        double discount = 0;
+        
+        for( MenuItem i : itemsOrdered ) {
+            if( i.getType() == MenuItem.products.Panini || i.getType() == MenuItem.products.Fritti ) {
+                discount += i.getPrice();
+            }
+        }
+        
+        if( discount > 50 ) {
+            discount = discount * 10 / 100;
         } else {
             discount = 0;
         }
