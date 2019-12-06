@@ -11,7 +11,7 @@ import it.unipd.tos.model.MenuItem;
 public class Bill implements TakeAwayBill {
     public double getOrderPrice(List<MenuItem> itemsOrdered) throws TakeAwayBillException {
         double total = 0;
-        int nPanini = 0;
+        int itemsN = 0;
         
         for( MenuItem i : itemsOrdered ) {
             total += i.getPrice();
@@ -21,21 +21,25 @@ public class Bill implements TakeAwayBill {
         
         total -= this.getPriceOver50Discount(itemsOrdered);
         
+        if( itemsN > 30 ) {
+            throw new TakeAwayBillException("Gli elementi dell'ordine possono essere al massimo 30");
+        }
+        
         return total;
     }
     
     private double getLowestPricePaninoDiscount(List<MenuItem> itemsOrdered) {
         double discount = Double.MAX_VALUE;
-        int nPanini = 0;
+        int paniniN = 0;
         
         for( MenuItem i : itemsOrdered ) {
             if( i.getType() == MenuItem.products.Panini ) {
-                nPanini++;
+                paniniN++;
                 discount = i.getPrice() < discount ? i.getPrice() : discount;
             }
         }
         
-        if( nPanini > 5 ) {
+        if( paniniN > 5 ) {
             discount /= 2;
         } else {
             discount = 0;
