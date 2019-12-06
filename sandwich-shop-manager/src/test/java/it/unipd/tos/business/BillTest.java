@@ -35,12 +35,18 @@ public class BillTest {
         frittoBase = new MenuItem(MenuItem.products.Fritti,"fritto1",3.5);
     }
     
+    @org.junit.Rule
+    public ExpectedException error= ExpectedException.none();
+    
     /*
      *   Calcolo totale base issue #1
      */
     @Test
     public void testEmptyList() throws TakeAwayBillException {
-        assertEquals(0,bill.getOrderPrice(this.itemsOrdered),0.0);
+        this.error.expect(TakeAwayBillException.class);
+        this.error.expectMessage("Ordine vuoto");
+        
+        this.bill.getOrderPrice(this.itemsOrdered);
     }
     
     @Test
@@ -189,7 +195,6 @@ public class BillTest {
     /*  
      * Calcolo totale sconto 50 issue #4
      */
-    private ExpectedException error= ExpectedException.none();
     
     // Aggiunta  di 30 panini base
     @Test
