@@ -47,7 +47,7 @@ public class BillTest {
     public void testOnlyOnePanino() throws TakeAwayBillException {
         this.itemsOrdered.add(this.paninoBase);
         
-        double sum = 5.35;
+        double sum = 5.35 + 0.5;
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0);
     }
     
@@ -55,7 +55,7 @@ public class BillTest {
     public void testOnlyOneBevanda() throws TakeAwayBillException {
         this.itemsOrdered.add(this.bevandaBase);
         
-        double sum = 2.4;
+        double sum = 2.4 + 0.5;
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0);
     }
     
@@ -63,7 +63,7 @@ public class BillTest {
     public void testOnlyOneFritto() throws TakeAwayBillException {
         this.itemsOrdered.add(this.frittoBase);
         
-        double sum = 3.5;
+        double sum = 3.5 + 0.5;
         assertEquals(sum,bill.getOrderPrice(this.itemsOrdered),0.0);
     }
     
