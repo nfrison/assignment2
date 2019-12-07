@@ -13,12 +13,12 @@ public class MenuItem {
     public MenuItem(products type, String name, double price) {
         this.type = type;
         if( name.equals("") ) {
-            throw new IllegalArgumentException("Il nome non può essere vuoto");
+            throw new IllegalArgumentException("Il nome non deve essere vuoto");
         } else {
             this.name = name;
         }
         if( price <= 0 ) {
-            throw new IllegalArgumentException("Il prezzo non può essere inferiore o uguale a 0");
+            throw new IllegalArgumentException("Il prezzo non deve essere inferiore o uguale a 0");
         } else {
             this.price = price;
         }
